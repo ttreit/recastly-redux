@@ -4,7 +4,7 @@ import changeVideo from './../actions/currentVideo.js';
 
 var mapStateToProps = state => {
   return {
-    videos: state.videos
+    videos: state.videoList
   };
 };
 
@@ -24,10 +24,3 @@ var VideoListContainer = connect(mapStateToProps, mapDispatchToProps)(VideoList)
 
 export default VideoListContainer;
 
-/*
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    toggleTodo: () => dispatch(toggleTodo(ownProps.todoId))
-  }
-}
-*/
