@@ -1,11 +1,8 @@
 import React from 'react';
-import VideoList from './VideoList.js';
-import VideoPlayer from './VideoPlayer.js';
-import Search from './Search.js';
 import SearchContainer from '../containers/SearchContainer.js';
 import VideoListContainer from '../containers/VideoListContainer.js';
 import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
-import handleVideoSearch from '../actions/search.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +17,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    handleVideoSearch('react tutorials');
+    //console.log('props', props);
+    //console.log('handleSearchInputChange', handleSearchInputChange);
+
+    handleSearchInputChange('react tutorials');
   }
 
   // handleVideoListEntryTitleClick(video) {
@@ -53,7 +53,7 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <VideoPlayerContainer/>
+            <VideoPlayerContainer />
           </div>
           <div className="col-md-5">
             <VideoListContainer />
