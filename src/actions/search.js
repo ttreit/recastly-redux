@@ -10,10 +10,6 @@ var handleVideoSearch = (q) => {
     query: q
   };
   return (dispatch) => {
-    
-    //Call the searchyoutube function and pass in options object and the callback
-    //options includes API key and query string (and max)
-    //callback dispatch function that sends the action object with the returned videos as the payload
     searchYouTube(options, (results) => {
       dispatch(changeVideo(results[0]));
       dispatch(changeVideoList(results));

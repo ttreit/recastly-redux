@@ -11,7 +11,6 @@ var videoListReducer = (state = [], action) => {
   default:
     return state;
   }
-  //TODO: define a reducer for the videoList field of our state.
 };
 
 export default videoListReducer;

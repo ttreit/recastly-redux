@@ -7,42 +7,12 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   videos: [],
-    //   currentVideo: null
-    // };
-
-   // this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
   }
 
   componentDidMount() {
-    //console.log('props', props);
-    //console.log('handleSearchInputChange', handleSearchInputChange);
-
-    handleSearchInputChange('react tutorials');
+    this.props.handleSearchInputChange('react tutorials');
   }
 
-  // handleVideoListEntryTitleClick(video) {
-  //   this.setState({currentVideo: video});
-  // }
-
-  // getYouTubeVideos(query) {
-  //   var options = {
-  //     key: this.props.API_KEY,
-  //     query: query
-  //   };
-
-  //   this.props.searchYouTube(options, (videos) =>
-  //     this.setState({
-  //       videos: videos,
-  //       currentVideo: videos[0]
-  //     })
-  //   );
-  // }
-
-  //TODO: swap out the React components below for the container components
-  //  you wrote in the 'containers' directory.
   render() {
     return (
       <div>
